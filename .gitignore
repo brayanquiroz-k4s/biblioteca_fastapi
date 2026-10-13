@@ -1,0 +1,17 @@
+# Entorno virtual
+.venv/
+
+# Variables de entorno con credenciales
+.env
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Configuración del editor (se conserva solo launch.json)
+.vscode/*
+!.vscode/launch.json
+
+# Archivos del sistema
+Thumbs.db
+.DS_Store
