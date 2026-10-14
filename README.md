@@ -12,6 +12,7 @@ services/   → lógica de acceso a datos
 models/     → modelos SQLAlchemy
 schemas.py  → esquemas Pydantic
 alembic/    → migraciones
+tests/      → pruebas con pytest
 ```
 
 ## Instalación
@@ -36,3 +37,13 @@ pip install -r requirements.txt
 | DELETE | `/api/libros/{id}` | Eliminar libro |
 
 Documentación interactiva: `http://localhost:8080/docs`
+
+## Tests
+Las pruebas usan una base SQLite en memoria, así que no necesitan MySQL ni tocan los datos reales.
+
+```bash
+pip install -r requirements-dev.txt
+pytest -v
+```
+
+Cubren el CRUD completo y los casos de error: validaciones (422) y recursos inexistentes (404).
